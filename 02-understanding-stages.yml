@@ -12,7 +12,7 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo Build FirstJob
-    - bash: $(PipelineVariable)
+    - bash: echo $(PipelineVariable)
   - job: SecondJob
     steps:
     - bash: echo Build Seconsd
