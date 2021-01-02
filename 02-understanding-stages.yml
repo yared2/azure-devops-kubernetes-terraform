@@ -20,7 +20,6 @@ stages:
   - job: DevDeploy
     steps:
     - bash: echo DevDeployJob
-    cancelTimeoutInMinutes: 
 - stage: QADeploy
   jobs:
   - job: QADeployJob
