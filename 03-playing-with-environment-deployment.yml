@@ -15,15 +15,13 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-stages:
-- stage:
 
-steps:
-- script: echo Running on $(operatingSystem)
-  displayName: 'Run a one-line script'
+# steps:
+# - script: echo Running on $(operatingSystem)
+#   displayName: 'Run a one-line script'
 
 
-stages:
+stages :
 - stage: Build
   jobs:
   - job: BuildJob
@@ -40,8 +38,7 @@ stages:
         steps:
           - script: echo deploy to Dev
 - stage: QADeploy
-  jobs:
-  
+  jobs: 
   - deployment: DevDeployJob
     environment: QA
     strategy:
